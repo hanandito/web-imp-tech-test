@@ -1,20 +1,15 @@
 <?php
+$A =  [68168, 87954, 32158, 8774];
 $B = [5408, 6604, 32158, 84984, 8774, 34871];
- $nilai = null;
- $sukuken = 0;
- $i = 0;
- foreach($B as $valueB){
-	$i++;
-	if (isNull($nilai1)){
-		$nilai = $valueB;
-		$sukuken = $i;
-	}else{
-		if ($nilai > $valueB){
-			$nilai = $valueB;
-		    $sukuken = $i;
-		}
-	}
- }
- 
- echo "suku ke-" . $sukuken . " dengan nilai = " . $nilai;
+
+$result = [];
+foreach($A as $valueA){
+   foreach($B as $valueB){
+	   if ($valueA == $valueB){
+		   array_push($result, $valueA);
+		   break;
+	   }
+   }
+}
+var_dump($result);
  ?>
